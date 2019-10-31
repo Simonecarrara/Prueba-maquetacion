@@ -1,0 +1,38 @@
+.sidebar-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.form-horizontal{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.foot{
+    position: relative;
+    top:50px;
+    left: 0px;
+}
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+}
+.img-responsive{
+    cursor: pointer;
+}
+.recov{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:space-around;
+}

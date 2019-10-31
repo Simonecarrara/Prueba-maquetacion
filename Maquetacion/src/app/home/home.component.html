@@ -1,0 +1,24 @@
+<app-header *ngIf="!userLogin"></app-header>
+<app-login *ngIf="userLogin"></app-login>
+<div class="container-fluid" *ngIf="!userLogin; else background">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 logo">
+            <img src="../../assets/img/mintta.JPG" alt="mintta" style="max-width: 100%;">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <h3>La nueva gestión dinámica de Marcas.<br />
+                Optimiza, impulsa y evoluciona</h3>
+        </div>
+    </div>
+    <footer>
+        <p><b>Mintta</b> es una marca de Grávita. Todos los derechos reservados <a href="#">Politica de
+        privacidad </a><a href="#">Politica de cookies</a></p>
+    </footer>
+</div>
+<ng-template #background>
+    <div class="container-fluid contM">
+        <div class="bk col-sm-10"></div>
+    </div>
+</ng-template>

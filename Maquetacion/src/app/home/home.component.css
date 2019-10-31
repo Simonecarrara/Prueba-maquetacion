@@ -1,0 +1,28 @@
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    text-align: center;
+}
+footer{
+    width: 100%;
+    height: 5vh;
+    padding: 5px;
+    border-top: 1px solid grey;
+    position: absolute;
+    top: 95vh;
+    left: 0px;
+    font-size: 0.8em;
+}
+.contM{
+    margin-left: 200px;
+}
+.bk{
+    height: 100vh;
+    background-image: url("../../assets/img/loginBack.JPG");
+    background-size: cover;
+
+}
