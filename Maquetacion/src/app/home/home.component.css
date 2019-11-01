@@ -1,4 +1,3 @@
-
 .logo{
     display: flex;
     justify-content: center;
@@ -17,12 +16,11 @@ footer{
     left: 0px;
     font-size: 0.8em;
 }
-.contM{
-    margin-left: 200px;
+.boxs{
+    padding:0px;
 }
 .bk{
     height: 100vh;
     background-image: url("../../assets/img/loginBack.JPG");
     background-size: cover;
-
 }

@@ -1,0 +1,31 @@
+<mat-nav-list>
+    <mat-list-item>
+        <mat-icon color="primary">keyboard_arrow_left</mat-icon>
+        <a href="#" matLine>Home</a>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                NASA
+            </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <mat-list-item *ngFor="let line of nasa">
+            <mat-icon matListIcon>{{line.icon}}</mat-icon>
+            <a href="#" matLine>{{line.txt}}</a>
+        </mat-list-item>
+        <!-- <mat-list-item>
+            <mat-icon matListIcon>library_books</mat-icon>
+            <a href="#" matLine>NASA Graphic Standards</a>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon matListIcon>library_books</mat-icon>
+            <a href="#" matLine>NASA Graphic Standards</a>
+        </mat-list-item> -->
+    </mat-expansion-panel>
+
+    <a href="#" mat-list-item>About</a>
+    <a href="#" mat-list-item>Services</a>
+</mat-nav-list>
