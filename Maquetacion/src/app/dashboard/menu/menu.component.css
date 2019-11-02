@@ -1,3 +1,72 @@
-div.mat-expansion-panel-body{
-    padding: 0px;
+.mat-expansion-panel-body, mat-nav-list{
+    padding: 0px !important;
+} 
+
+.mat-list-item-content,mat-expansion-panel-header{
+    font-size: 1.2rem !important;
+}
+
+mat-expansion-panel{
+    border-radius: 0% !important;
+}
+
+mat-icon{
+    color: grey !important;
+    font-size: 1.5rem !important;
+    display:flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.mat-list-item, mat-expansion-panel-header {
+    height: auto !important;
+    padding-top:0.4rem !important;
+    padding-bottom:0.4rem !important;
+}
+mat-panel-title{
+    padding-top:0.5rem !important;
+    padding-bottom:0.5rem !important;
+}
+
+.mat-list-text{
+    padding:0px 0px 0px 8px !important;
+}
+.mat-progress-bar-buffer{
+    background: rgb(198, 253, 232) !important;
+}
+.mat-progress-bar-fill::after {
+    background: mediumspringgreen !important;
+}
+
+.border_green{
+    border-left:5px solid rgb(11, 248, 3);
+    border-radius: 0% !important;
+    font-weight: bold;
+}
+
+.border_grey{
+    border-left:5px solid grey;
+}
+
+.exPan2{
+    width: 228px;
+    position: absolute;
+    bottom: 0px;
+}
+.eP2 .mat-expansion-indicator::after{
+    transform: rotate(225deg) !important;
+}
+
+.my_card{
+    padding: 0px !important;
+    max-height: 30px;
+}
+.card_image{
+    height: 30px !important;
+    width: 30px !important;
+    background-image: url('https://www.somosgravita.com/wp-content/uploads/2019/06/Gravita-avatar.png');
+    background-size: cover;
+}
+mat-card-title{
+    font-size: 1.2rem !important;
 }

@@ -1,31 +1,82 @@
 <mat-nav-list>
+
     <mat-list-item>
         <mat-icon color="primary">keyboard_arrow_left</mat-icon>
-        <a href="#" matLine>Home</a>
+        <a href="#" matLine style="color:grey">Mis marcas</a>
     </mat-list-item>
+
     <mat-divider></mat-divider>
 
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
+    <mat-expansion-panel #myPanel class="exPan1">
+
+        <mat-expansion-panel-header [ngClass]="{border_green: myPanel.expanded}">
             <mat-panel-title>
                 NASA
             </mat-panel-title>
-
         </mat-expansion-panel-header>
-        <mat-list-item *ngFor="let line of nasa">
+
+        <mat-list-item *ngFor="let line of nasa" class="border_green">
             <mat-icon matListIcon>{{line.icon}}</mat-icon>
-            <a href="#" matLine>{{line.txt}}</a>
+            <a href="#" matLine><b>{{line.txt}}</b></a>
         </mat-list-item>
-        <!-- <mat-list-item>
-            <mat-icon matListIcon>library_books</mat-icon>
-            <a href="#" matLine>NASA Graphic Standards</a>
+
+        <mat-divider class="border_green"></mat-divider>
+
+        <a href="#" mat-list-item class="border_green">
+            Tus colaboradores: {{colaboradores}}<mat-icon>person_add</mat-icon>
+        </a>
+
+        <a href="#" mat-list-item class="border_green">
+            Espacio restante: {{espacio_st}} MB
+        </a>
+        <mat-list-item class="border_green">
+            <mat-progress-bar [value]="espacio" color="green"></mat-progress-bar>
         </mat-list-item>
-        <mat-list-item>
-            <mat-icon matListIcon>library_books</mat-icon>
-            <a href="#" matLine>NASA Graphic Standards</a>
-        </mat-list-item> -->
+
+
     </mat-expansion-panel>
 
-    <a href="#" mat-list-item>About</a>
-    <a href="#" mat-list-item>Services</a>
+    <a href="#" mat-list-item [ngClass]="{border_grey: myPanel.expanded}">
+        <mat-icon matListIcon>add_circle</mat-icon>
+        Añadir nueva marca
+    </a>
+    <mat-divider></mat-divider>
+    <a href="#" mat-list-item>
+        <mat-icon matListIcon>insert_chart</mat-icon>
+        Informes globales
+    </a>
+    <mat-divider></mat-divider>
+
+    <mat-expansion-panel #exPanel2  class="eP2" [ngClass]="{exPan2: !(myPanel.expanded && exPanel2.expanded)}">
+
+        <mat-expansion-panel-header >
+                <mat-card class="my_card">
+                        <mat-card-header>
+                          <div mat-card-avatar class="card_image"></div>
+                          <mat-card-title>Grávita Transformation SL</mat-card-title>
+                        </mat-card-header>
+                    </mat-card>
+        </mat-expansion-panel-header>
+
+        <mat-list-item *ngFor="let line of nasa">
+            <mat-icon matListIcon>{{line.icon}}</mat-icon>
+            <a href="#" matLine><b>{{line.txt}}</b></a>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <a href="#" mat-list-item>
+            Tus colaboradores: {{colaboradores}}<mat-icon>person_add</mat-icon>
+        </a>
+
+        <a href="#" mat-list-item>
+            Espacio restante: {{espacio_st}} MB
+        </a>
+        <mat-list-item>
+            <mat-progress-bar [value]="espacio" color="green"></mat-progress-bar>
+        </mat-list-item>
+
+
+    </mat-expansion-panel>
+
 </mat-nav-list>

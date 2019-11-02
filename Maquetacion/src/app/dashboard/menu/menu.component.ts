@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { homedir } from 'os';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +7,10 @@ import { homedir } from 'os';
   encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent implements OnInit {
-  
+  colaboradores="3";
+  espacio=50;
+  espacio_st=this.espacio+"";
+
   nasa=[{
     icon: "library_books",
     txt: "NASA Graphic Standards"
@@ -26,11 +28,29 @@ export class MenuComponent implements OnInit {
     txt: "Design on demand"
   }];
 
+  user=[{
+    icon: "library_books",
+    txt: "Mi perfil"
+  },{
+    icon: "perm_media",
+    txt: "Formación"
+  },{
+    icon: "perm_media",
+    txt: "Galería de fotos"
+  },{
+    icon: "insert_chart",
+    txt: "Estadisticas e indicadores"
+  },{
+    icon: "color_lens",
+    txt: "Design on demand"
+  }];
+
 
   constructor() { }
 
   ngOnInit() {
   }
+  
   
   
 
